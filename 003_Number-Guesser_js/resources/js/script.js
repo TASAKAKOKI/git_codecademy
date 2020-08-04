@@ -14,17 +14,7 @@ const generateTarget = () => Math.floor(Math.random() * 10);
 //     }
 // };
 // above function can be replaced by 'Math.abs()'
-const compareGuesses = (user, pc, target) => {
-    if (Math.abs(user - target) > Math.abs(pc - target)) {
-        return false;
-    }
-    else if (Math.abs(user - target) < Math.abs(pc - target)) {
-        return true;
-    }
-    else {
-        return true;
-    }
-};
+const compareGuesses = (user, pc, target) => (Math.abs(user - target) > Math.abs(pc - target))? false : true;
 
 const updateScore = winner => {
     if (winner == 'human') {

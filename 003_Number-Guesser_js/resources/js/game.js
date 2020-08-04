@@ -20,7 +20,8 @@ guessButton.addEventListener('click', () => {
   const currentHumanGuess = humanGuessInput.value;
   // Make a random 'computer guess'
   if (currentHumanGuess >= 10 || currentHumanGuess < 0) {
-      alert( 'userInput Number is out of range!' );
+      alert( 'user Input Number is out of range!' );
+      return;
   }
   const computerGuess = Math.floor(Math.random() * 10);
 
